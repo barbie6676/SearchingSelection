@@ -9,9 +9,9 @@ public static int longestIncreSubseq(int[] X) {
 		if (n<=1) return n;
 		
 		
-		//M[j] stores the index k of the smallest value X[k] such that there is an increasing subsequence of length j ending at X[k]
+		//M[j] stores the index k of the smallest Index k such that there is an increasing subsequence of length j ending at X[k]
 		//for example, X = [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]
-		// j = 1, M[1] = 0; j = 2, M[2] = 1 (0,8); j = 3, M[3] = 3 (X[2] = 12, 0,8,12, or 0,4,12)
+		// j = 1, M[1] = 0; j = 2, M[2] = 1 (0,8); j = 3, M[3] = 3 (X[3] = 12, 0,8,12, or 0,4,12)
 		// j = 4, an increasing subsequence of len 4 can end at X[7] (0,8,10,14), or at X[9](0,4,6,9) the smaller k is 7, M[4] = 7
 		//P[k] stores the position of the predecessor of X[k] in the lis ending at X[k]
 		// for example 0 4 5 is a lis, P[2] = 1, because X[2] = 5, the predecessor is 4, position is 1
